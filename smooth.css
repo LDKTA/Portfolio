@@ -1,0 +1,296 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Sans-serif', Helvetica;
+    line-height: 2.5;
+    min-height: 100vh;
+    letter-spacing: 0.02em;
+    font-weight: 100;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.05);
+    z-index: 1;
+}
+
+.nav-item {
+    list-style: none;
+    margin-right: 2rem;
+}
+  
+.nav-item a {
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: black;
+    transition: all 200ms ease-in;
+}
+  
+.nav-item a:hover {
+    color: #03869d;
+}
+  
+.nav-item:first-child {
+    margin-right: auto;
+    margin-left: 2rem;
+}
+
+svg {
+    margin-top: 1rem;
+}
+  
+.btn-primary {
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    background: #c0e57b;
+    border: none;
+    outline: none;
+    border-radius: 0.2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+}
+  
+.btn-primary:hover {
+    background: #8db0bb;
+}
+
+.container {
+      width: 100%;
+      height: 100%;
+}
+
+section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      height: 100vh;
+}
+
+#about h1 {
+    font-size: 5rem;
+}
+
+#about p {
+    width: 54vh;
+}
+
+#about .fab {
+    font-size: 2em;
+    letter-spacing: 1rem;
+}
+
+.fa-html5 {
+    color: #e34c26;
+}
+
+.fa-css3-alt {
+    color: #264de4;
+}
+
+.fa-js-square {
+    color: #f0db4f;
+}
+
+.fa-react {
+    color: #60dafb;
+}
+
+.fa-node-js {
+    color: #036e01;
+}
+
+p {
+    color: gray;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Contact Page */
+
+.email {
+    font-family: 'VT323', monospace;
+    font-size: 1.8rem;
+    background: #c0e57b;
+    color: #00000082;
+    margin: 40px;
+    padding: 3px 20px 3px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 0.2rem;
+}
+
+.contact h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    color: gray;
+    font-weight: 100;
+}
+
+h3 a {
+    color: lightgray;
+    font-size: .8rem;
+    text-decoration: none;
+}
+
+h3 a:hover {
+    color: #03869d;
+}
+
+.contact a:hover {
+    color: #8db0bb;
+}
+
+/* Footer */
+
+.footer {
+    width: 100%;
+    text-align: center;
+    position: sticky;
+    top: 100%;
+}
+
+.footer p {
+    font-size: small;
+}
+
+.icons .fab {
+    color: black;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+    text-decoration: none;
+}
+
+.icons .fab:hover {
+    color: #03869d;
+}
+
+/* Project Slider for Work */
+
+.slider {
+    height: 64%;
+    width: 70%;
+    min-width: 500px;
+    position: relative;
+    border-radius: 0.3rem;
+    padding: 30px;
+}
+
+.slider-img {
+    position: relative;
+    width: 100%;
+}
+
+img {
+    position: relative;
+    width: 100%;
+    display: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.active {
+    display: block;
+}
+
+#prev, #next {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    border-radius: 0.3rem;
+    border: none;
+}
+
+#prev {
+    left: 15px;
+}
+
+#next {
+    right: 15px;
+}
+
+/* MQ */
+
+@media (max-width: 500px) {
+    * {
+        overflow-x: hidden;
+    }
+    nav {
+        display: none;
+    }
+    #about h1 {
+        font-size: 42px;
+    }
+
+    #about p {
+        font-size: 13.5px;
+        width: 350px;
+    }
+    .email {
+        font-size: 1rem;
+    }
+    .contact h1 {
+        font-size: 20px;
+    }
+    .contact h2 {
+        font-size: 13.5px;
+    }
+    .slider .slider-img {
+        width: 375px;
+        margin: auto;
+        overflow-x: visible;
+    }
+    #prev, #next {
+        margin-left: 12rem;
+        margin-right: 12rem;
+        margin-top: 20rem;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    nav {
+        display: none;
+    }
+    #about h1 {
+        font-size: 42px;
+        margin-top: 3rem;
+    }
+    #about p {
+        width: 90%;
+        letter-spacing: normal;
+        line-height: 2;
+        font-size: 13.5px;
+    }
+    .email {
+        font-size: 1rem;
+    }
+    .contact h1 {
+        margin-top: 20rem;
+        font-size: 20px;
+    }
+    .contact h2 {
+        font-size: 13.5px;
+    }
+}
